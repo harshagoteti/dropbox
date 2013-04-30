@@ -15,7 +15,7 @@ development:
   database: dropbox_development
   pool: 5
   username: root
-  password:
+  password: hackerstop 
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,15 +28,5 @@ test:
   database: dropbox_test
   pool: 5
   username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
-
-production:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  database: dropbox_production
-  pool: 5
-  username: root
-  password:
+  password: hackerstop
   socket: /var/run/mysqld/mysqld.sock
