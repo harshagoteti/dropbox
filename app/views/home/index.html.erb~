@@ -1,0 +1,37 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Drop Box:Can easily share files</title>
+<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+</head>
+<br/><br/>
+<body>
+  <div id="container">
+    <div id= "user_nav" >
+<%if user_signed_in?%>
+signed in as <%=current_user.email%>. Not you?
+<%= link_to("Sign out", destroy_user_session_path, :method => :delete) %>
+<%else%>
+<h2><%= link_to "Sign up",new_user_registration_path%></h2><br/>Already a user of harsha Drop Box!<h2><%= link_to " Sign in" ,new_user_session_path %></h2>
+<%end%>
+</div>      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+    </div>
+
+</body>
+</html>
+
+
+
+

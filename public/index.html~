@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<title>DropBox: used for sharing files</title>
+<body>
+<h1><b><u>SIGN UP:-</u></b></h1>
+username:&nbsp        <input type ="text" name ="type" value="type your username here"  onfocus="make_blank(this); onblur="restore_placeholder(this);"/> <br/>
+
+email id:&nbsp&nbsp&nbsp&nbsp<input type = "text" value = "type your email id here"/><br/>
+password:&nbsp &nbsp&nbsp&nbsp<input type = "password" /><br/>	
+confirm password:&nbsp&nbsp&nbsp&nbsp<input type= "password"/><br/>
+                 &nbsp&nbsp&nbsp&nbsp<input type= "submit" > <br/>
+already a  member!, <a href = "sign in.html.erb">sign in</a>over here :)
+</body>
+</html>
